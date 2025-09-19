@@ -1,0 +1,38 @@
+name: step_name [step_name]: basic_cleaning
+conda_env: conda.yml
+
+entry_points:
+  main:
+    parameters:
+
+      parameters [parameter1:
+        description: ## ADD DESCRIPTION
+        type: string
+
+      parameter2]: input_artifact:
+        description: ## ADD DESCRIPTION
+        type: string
+
+      output_artifact:
+        description: ## ADD DESCRIPTION
+        type: string
+
+      output_type:
+        description: ## ADD DESCRIPTION
+        type: string
+
+      output_description:
+        description: ## ADD DESCRIPTION
+        type: string
+
+      min_price:
+        description: ## ADD DESCRIPTION
+        type: string
+
+      max_price:
+        description: ## ADD DESCRIPTION
+        type: string
+
+
+    command: >-
+        python script_name [run.py]: run.py  --parameters [parameter1 {parameters [parameter1}  --parameter2]: input_artifact {parameter2]: input_artifact}  --output_artifact {output_artifact}  --output_type {output_type}  --output_description {output_description}  --min_price {min_price}  --max_price {max_price} 
