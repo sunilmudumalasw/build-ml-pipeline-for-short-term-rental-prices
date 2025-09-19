@@ -5,18 +5,36 @@ entry_points:
   main:
     parameters:
 
-      parameter1:
-        description: ## ADD DESCRIPTION
+      input_artifact:
+        description: Name of the input artifact
         type: string
 
-      parameter2:
-        description: ## ADD DESCRIPTION
+      output_artifact_name:
+        description:  Name of the Weights & Biases output artifact to be created
         type: string
 
-      parameter3:
-        description: ## ADD DESCRIPTION
+      output_artifact_type:
+        description: Type of the Weights & Biases output artifact to be created
         type: string
+
+      output_artifact_description:
+        description: Description of the Weights & Biases output artifact to be created
+        type: str
+
+      min_price:
+        description: Minimum price to filter the input artifact
+        type: float
+
+      max_price:
+        description: Maximum price to filter the input artifact
+        type: float
+
 
 
     command: >-
-        python run.py  --parameter1 {parameter1}  --parameter2 {parameter2}  --parameter3 {parameter3} 
+        python run.py  --input_artifact {input_artifact} \
+                       --output_artifact_name {output_artifact_name} \
+                       --output_artifact_type {output_artifact_type} \
+                       --output_artifact_description {output_artifact_description} \
+                       --min_price {min_price} \
+                       --max_price {max_price} 
